@@ -33,7 +33,7 @@ public class Robot extends GamePiece implements Mortable {
 	public Robot(Point position, int step, int millisec) {
 		super(Constants.ROBOT_IMAGE1, position);
 		this.millisec = millisec;
-		this.step = step;
+		this.step = 18;
 		this.dieAfter = 5;
 	}
 
@@ -75,6 +75,7 @@ public class Robot extends GamePiece implements Mortable {
 				}
 				Rectangle player = GamePlayer.getPlayer().getBounds();
 				Rectangle my = me.getBounds();
+				GamePanel parent = (GamePanel) me.getParent();
 				int step = me.step;
 
 				int new_x = my.x;
@@ -95,7 +96,7 @@ public class Robot extends GamePiece implements Mortable {
 					richtung_LR = Constants.LINKS;
 				}
 
-				GamePanel parent = (GamePanel) me.getParent();
+				
 
 				boolean stop = false;
 				for (GamePiece comp : parent.getAllGamePiece()) {
@@ -104,13 +105,13 @@ public class Robot extends GamePiece implements Mortable {
 						continue;
 
 					stop = BoundsUtils.overlapByMoving(my, comp.getBounds(), richtung_LR, step)
-							|| BoundsUtils.overlapByMoving(my, comp.getBounds(), richtung_UO, step)
-							|| BoundsUtils.smallOutsideOfGreat(my, me.getParent().getBounds(), richtung_LR, step)
-							|| BoundsUtils.smallOutsideOfGreat(my, me.getParent().getBounds(), richtung_UO, step);
+						|| BoundsUtils.overlapByMoving(my, comp.getBounds(), richtung_UO, step)
+						|| BoundsUtils.smallOutsideOfGreat(my, parent.getBounds(), richtung_LR, step)
+						|| BoundsUtils.smallOutsideOfGreat(my, parent.getBounds(), richtung_UO, step);
 
-					if (stop) {
-						if (!GameRules_okkit.interaction(me, comp))
-							counter++;
+					if (stop && !GameRules_okkit.interaction(me, comp)) {
+						
+						counter++;
 						break;
 					}
 				}
