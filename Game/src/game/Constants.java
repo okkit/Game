@@ -46,9 +46,9 @@ public class Constants {
 	public static final int PANEL_WIDTH = 975;
 	public static final int PANEL_HEIGHT = 750;
 	// Farbe des Panels
-	public static final int PANEL_C_RED = 255;
-	public static final int PANEL_C_GREEN = 255;
-	public static final int PANEL_C_BLUE = 255;
+	public static final int PANEL_C_RED = 200;
+	public static final int PANEL_C_GREEN = 200;
+	public static final int PANEL_C_BLUE = 200;
 
 	// Schritt, mit dem sich der Player bewegt
 	public static final int STEP_DEFAULT = 10;

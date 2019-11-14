@@ -34,7 +34,7 @@ public class Robot extends GamePiece implements Mortable {
 		super(Constants.ROBOT_IMAGE1, position);
 		this.millisec = millisec;
 		this.step = step;
-		this.dieAfter = 5;
+		this.dieAfter = 100;
 	}
 
 	public Timer getTimer() {
@@ -52,7 +52,6 @@ public class Robot extends GamePiece implements Mortable {
 //	}
 
 	public void die() {
-
 		Container parent = this.getParent();
 		parent.remove(this);
 		parent.repaint();
