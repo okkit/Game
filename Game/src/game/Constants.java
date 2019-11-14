@@ -3,7 +3,7 @@ package game;
 public class Constants {
 
 	// Name des Spiels
-	public static final String GAME_NAME = "Game";
+	public static final String GAME_NAME = "Angry pirate";
 	
 	// Buchstaben für Objekte beim Einlesen aus dem File
 	public static char CH_DOOR = 	'D';

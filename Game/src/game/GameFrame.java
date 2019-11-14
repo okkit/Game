@@ -24,8 +24,8 @@ public class GameFrame extends JFrame {
 		setTitle(Constants.GAME_NAME);
 		setBounds(Constants.FRAME_X, Constants.FRAME_Y, Constants.FRAME_WIDTH, Constants.FRAME_HEIGHT);
 		setVisible(true);
-		getContentPane()
-				.setBackground(new Color(Constants.FRAME_C_RED, Constants.FRAME_C_GREEN, Constants.FRAME_C_BLUE));
+		setResizable(false);
+		getContentPane().setBackground(new Color(Constants.FRAME_C_RED, Constants.FRAME_C_GREEN, Constants.FRAME_C_BLUE));
 
 		/**
 		 * Fenster schlieﬂen
