@@ -23,18 +23,16 @@ public class GamePlayer extends GamePiece implements Mortable {
 	public static GamePlayer playerAtPosition(Point position) {
 		if (GamePlayer.instance == null) {
 			GamePlayer.instance = new GamePlayer(position);
-		}
-		else {
+		} else {
 			Rectangle rect = GamePlayer.instance.getBounds();
 			GamePlayer.instance.setBounds(new Rectangle(position.x, position.y, rect.width, rect.height));
 		}
 		return GamePlayer.instance;
 	}
-	
 
 	public static GamePlayer getPlayer() {
 		if (GamePlayer.instance == null) {
-			GamePlayer.instance = new GamePlayer(new Point(0,0));
+			GamePlayer.instance = new GamePlayer(new Point(0, 0));
 		}
 		return GamePlayer.instance;
 	}
@@ -69,7 +67,7 @@ public class GamePlayer extends GamePiece implements Mortable {
 		((GamePanel) me.getParent()).pause = true;
 		timer.start();
 	}
-	
+
 	ImageIcon getPengImage(int i) {
 
 //		String img = "/CatPeng" + i + ".png";
