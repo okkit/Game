@@ -60,7 +60,7 @@ public class Robot extends GamePiece implements Mortable {
 	
 	void dropKeyForRoom(String roomName) {
 		GameItem key = new GameItem(roomName, Constants.ITEM_KEY, Constants.KEY_IMAGE, getLocation());
-		((GamePanel)getParent()).dropItem(key);
+		((GamePanel)getParent()).add(key);
 	}
 
 	public void action() {
