@@ -28,7 +28,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 	private static final long serialVersionUID = 1L;
 
 //	GamePiece player;
-	boolean pause;
+	protected boolean pause;
 	
 	/**
 	 * 
@@ -288,7 +288,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 		}
 	}
 
-	private int willDoStep(GamePiece moving, int richtung, int step) {
+	protected int willDoStep(GamePiece moving, int richtung, int step) {
 
 		if (moving instanceof GamePlayer) {
 			GameDoor door = this.checkPlayerAtDoor(moving);
