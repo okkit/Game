@@ -6,6 +6,8 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
+import OffeneHose.OffeneHosePanel;
+
 
 public class GameFrame extends JFrame {
 
@@ -38,7 +40,7 @@ public class GameFrame extends JFrame {
 			}
 		});
 		
-		add(new GamePanel(map)).requestFocusInWindow();
+		add(new OffeneHosePanel(map)).requestFocusInWindow();
 	}
 
 	/**
