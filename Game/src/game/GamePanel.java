@@ -145,6 +145,9 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 				else if (ch == Constants.CH_BLOCKFEST) {
 					this.add(new BlockFest(j * Constants.FILE_STEP_X, i * Constants.FILE_STEP_Y));
 				}
+				else if (ch == Constants.CH_SPAWNER) {
+					this.add(new Spawner(j * Constants.FILE_STEP_X, i * Constants.FILE_STEP_Y));
+				}
 				
 			}
 		}
