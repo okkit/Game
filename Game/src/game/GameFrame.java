@@ -6,6 +6,8 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JFrame;
 
+import angryPirate.AngryPiratePanel;
+
 
 public class GameFrame extends JFrame {
 
@@ -38,7 +40,7 @@ public class GameFrame extends JFrame {
 			}
 		});
 		
-		add(new GamePanel(map)).requestFocusInWindow();
+		add(new AngryPiratePanel(map)).requestFocusInWindow();
 	}
 
 	/**
