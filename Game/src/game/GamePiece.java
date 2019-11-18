@@ -3,7 +3,6 @@ package game;
 import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.Point;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 

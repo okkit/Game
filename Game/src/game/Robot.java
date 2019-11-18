@@ -34,7 +34,7 @@ public class Robot extends GamePiece implements Mortable {
 		super(Constants.ROBOT_IMAGE1, position);
 		this.millisec = millisec;
 		this.step = step;
-		this.dieAfter = 100;
+		this.dieAfter = 1;
 	}
 
 	public Timer getTimer() {
@@ -53,8 +53,14 @@ public class Robot extends GamePiece implements Mortable {
 
 	public void die() {
 		Container parent = this.getParent();
+		dropKeyForRoom("Room2");
 		parent.remove(this);
 		parent.repaint();
+	}
+	
+	void dropKeyForRoom(String roomName) {
+		GameItem key = new GameItem(roomName, Constants.ITEM_KEY, Constants.KEY_IMAGE, getLocation());
+		((GamePanel)getParent()).dropItem(key);
 	}
 
 	public void action() {

@@ -26,6 +26,8 @@ public class Constants {
 	public static final String ROBOT_IMAGE2 = "/666.gif";
 	public static final String ROBOT_IMAGE3 = "/666.gif";
 	public static final String BLOCK_IMAGE = "/Block_10x10.png";
+	public static final String KEY_IMAGE = "/key.png";
+	public static final int ITEM_KEY = 0;
 	
 	// GameFrame-Positionierung und Größe auf dem Bildschirm
 	public static final int FRAME_X = 900;

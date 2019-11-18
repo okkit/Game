@@ -128,6 +128,10 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 		}
 		return content;
 	}
+	
+	void dropItem(GameItem item) {
+		add(item);
+	}
 
 	private void initPieces(char[][] content) {
 
