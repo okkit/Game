@@ -25,6 +25,7 @@ public class GameFrame extends JFrame {
 		setBounds(Constants.FRAME_X, Constants.FRAME_Y, Constants.FRAME_WIDTH, Constants.FRAME_HEIGHT);
 		setVisible(true);
 		setLocationRelativeTo(null);
+		setBackground(Color.BLUE);
 		getContentPane()
 				.setBackground(new Color(Constants.FRAME_C_RED, Constants.FRAME_C_GREEN, Constants.FRAME_C_BLUE));
 
