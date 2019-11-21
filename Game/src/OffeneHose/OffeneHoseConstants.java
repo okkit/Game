@@ -1,6 +1,8 @@
-package game;
+package OffeneHose;
 
-public class Constants {
+import game.Constants;
+
+public class OffeneHoseConstants extends Constants{
 
 	// Name des Spiels
 	public static final String GAME_NAME = "Game";
@@ -9,6 +11,8 @@ public class Constants {
 	public static char CH_DOOR = 	'D';
 	public static char CH_ROBOT = 	'R';
 	public static char CH_BLOCK = 	'B';
+	public static char CH_BLOCKFEST = 'F';
+	public static char CH_SPAWNER = 'S';
 	public static char CH_PLAYER = 	'P';
 	public static char CH_NOTHING = '-';
 	public static char CH_BLANK = ' ';
@@ -26,6 +30,8 @@ public class Constants {
 	public static final String ROBOT_IMAGE2 = "/666.gif";
 	public static final String ROBOT_IMAGE3 = "/666.gif";
 	public static final String BLOCK_IMAGE = "/Block_10x10.png";
+	public static final String BLOCKFEST_IMAGE = "/Festbock.png";
+	public static final String SPAWNER_IMAGE = "/Spawner_30x30.png";
 	
 	// GameFrame-Positionierung und Größe auf dem Bildschirm
 	public static final int FRAME_X = 900;
@@ -70,6 +76,5 @@ public class Constants {
 	public static final int BLOCK_C_RED = 30;
 	public static final int BLOCK_C_GREEN = 30;
 	public static final int BLOCK_C_BLUE = 30;
-
 	
 }

@@ -1,8 +1,10 @@
-package game;
+package OffeneHose;
 
 import java.awt.Point;
 
 import javax.swing.Timer;
+
+import game.GamePiece;
 
 public class Spawner extends GamePiece {
 
@@ -13,10 +15,10 @@ public class Spawner extends GamePiece {
 	private static final long serialVersionUID = 1L;
 
 	public Spawner(Point position) {
-		super(Constants.SPAWNER_IMAGE, position);
+		super(OffeneHoseConstants.SPAWNER_IMAGE, position);
 	}
 	
 	public Spawner(int x, int y) {
-		super(Constants.SPAWNER_IMAGE, new Point(x, y));
+		super(OffeneHoseConstants.SPAWNER_IMAGE, new Point(x, y));
 	}
 }
