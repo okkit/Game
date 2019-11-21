@@ -1,6 +1,6 @@
 package game.main;
 
-import game.GameFrame;
+import game.master.GameFrame;
 
 //https://allaboutmynonexistedworld.wordpress.com/2014/02/05/eclipse-git-merging-branch-to-master/
 public class Game {

@@ -1,4 +1,4 @@
-package game.rules;
+package game.master;
 
 public class GameRules {
 

@@ -2,7 +2,7 @@ package utils;
 
 import java.awt.Rectangle;
 
-import game.Constants;
+import game.master.Constants;
 
 public class BoundsUtils {
 

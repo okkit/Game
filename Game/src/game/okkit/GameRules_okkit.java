@@ -3,11 +3,11 @@ package game.okkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import game.Actions;
-import game.Block;
-import game.GamePlayer;
-import game.Robot;
-import game.rules.GameRules;
+import game.master.Actions;
+import game.master.Block;
+import game.master.GamePlayer;
+import game.master.GameRules;
+import game.master.Robot;
 
 public class GameRules_okkit extends GameRules {
 

@@ -1,5 +1,5 @@
 
-package game;
+package game.master;
 
 public interface Deadly {
 	

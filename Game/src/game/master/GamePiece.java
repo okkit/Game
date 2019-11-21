@@ -1,4 +1,4 @@
-package game;
+package game.master;
 
 import java.awt.Dimension;
 import java.awt.Insets;

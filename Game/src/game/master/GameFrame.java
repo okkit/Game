@@ -1,4 +1,4 @@
-package game;
+package game.master;
 
 import java.awt.Color;
 import java.awt.event.WindowAdapter;
