@@ -22,7 +22,7 @@ public class Constants {
 	
 	// Images
 	public static final String PLAYER_IMAGE = "/mario.gif";
-	public static final String ROBOT_IMAGE1 = "/Robot.gif";
+	public static final String ROBOT_IMAGE1 = "/luigi.gif";
 	public static final String ROBOT_IMAGE2 = "/666.gif";
 	public static final String ROBOT_IMAGE3 = "/666.gif";
 	public static final String BLOCK_IMAGE = "/Block_10x10.png";

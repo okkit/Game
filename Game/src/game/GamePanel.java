@@ -123,6 +123,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 			content = FileUtils.readText(source+".txt");
 
 		} catch (FileNotFoundException e) {
+			System.out.println("HAAAAAALLLLLOOOOOO");
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
