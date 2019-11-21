@@ -12,6 +12,8 @@ public class Constants {
 	public static char CH_PLAYER = 	'P';
 	public static char CH_NOTHING = '-';
 	public static char CH_BLANK = ' ';
+	public static char CH_BLOCKFEST = 'F';
+	public static char CH_SPAWNER = 'S';
 	
 	// Schritt beim einlesen aus dem File
 	public static int FILE_STEP_X = 10;
@@ -21,11 +23,14 @@ public class Constants {
 	
 	
 	// Images
-	public static final String PLAYER_IMAGE = "/CatSmall.png";
+	public static final String PLAYER_IMAGE = "/Ritter.gif";
 	public static final String ROBOT_IMAGE1 = "/Robot.gif";
 	public static final String ROBOT_IMAGE2 = "/666.gif";
 	public static final String ROBOT_IMAGE3 = "/666.gif";
 	public static final String BLOCK_IMAGE = "/Block_10x10.png";
+	public static final String BLOCKFEST_IMAGE = "/Festbock.png";
+	public static final String SPAWNER_IMAGE = "/Spawner_30x30.png";
+	
 	
 	// GameFrame-Positionierung und Größe auf dem Bildschirm
 	public static final int FRAME_X = 900;
