@@ -2,11 +2,14 @@ package game;
 
 import java.awt.Point;
 
+import javax.swing.Timer;
+
 public class Spawner extends GamePiece {
 
-	/**
-	 * 
-	 */
+	Timer timer;
+	int sekunden;
+
+	
 	private static final long serialVersionUID = 1L;
 
 	public Spawner(Point position) {
