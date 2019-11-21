@@ -16,11 +16,11 @@ public class GameRules_okkit extends GameRules {
 		if (attacker instanceof Robot) {
 			if (attacked instanceof GamePlayer) {
 				((GamePlayer) attacked).die();
-				System.out.println("Robot attakiert Player");
+//				System.out.println("Robot attakiert Player");
 				return true;
 			} 
 			else if (attacked instanceof Robot) {
-				System.out.println("Robot attakiert Robot");
+//				System.out.println("Robot attakiert Robot");
 				
 				long when = System.currentTimeMillis();
 

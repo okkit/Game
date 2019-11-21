@@ -33,7 +33,7 @@ public class Robot extends GamePiece implements Mortable {
 	public Robot(Point position, int step, int millisec) {
 		super(Constants.ROBOT_IMAGE1, position);
 		this.millisec = millisec;
-		this.step = 18;
+		this.step = step;
 		this.dieAfter = 5;
 	}
 
@@ -73,9 +73,10 @@ public class Robot extends GamePiece implements Mortable {
 					me.die();
 					return;
 				}
+				
+			
 				Rectangle player = GamePlayer.getPlayer().getBounds();
 				Rectangle my = me.getBounds();
-				GamePanel parent = (GamePanel) me.getParent();
 				int step = me.step;
 
 				int new_x = my.x;
@@ -95,56 +96,60 @@ public class Robot extends GamePiece implements Mortable {
 				} else { // if (my.x > player.x + player.width)
 					richtung_LR = Constants.LINKS;
 				}
-
 				
-
-				boolean stop = false;
-				for (GamePiece comp : parent.getAllGamePiece()) {
-
-					if (me.equals(comp))
-						continue;
-
-					stop = BoundsUtils.overlapByMoving(my, comp.getBounds(), richtung_LR, step)
-						|| BoundsUtils.overlapByMoving(my, comp.getBounds(), richtung_UO, step)
-						|| BoundsUtils.smallOutsideOfGreat(my, parent.getBounds(), richtung_LR, step)
-						|| BoundsUtils.smallOutsideOfGreat(my, parent.getBounds(), richtung_UO, step);
-
-					if (stop && !GameRules_okkit.interaction(me, comp)) {
-						
-						counter++;
-						break;
-					}
-				}
-
-				if (richtung_UO == Constants.UNTEN) {
-					if (stop)
-						new_y = my.y - step;
-					else
-						new_y = my.y + step;
-				} else {
-					if (stop)
-						new_y = my.y + step;
-					else
-						new_y = my.y - step;
-				}
-
-				if (richtung_LR == Constants.LINKS) {
-					if (stop)
-						new_x = my.x + step;
-					else
-						new_x = my.x - step;
-				} else {
-					if (stop)
-						new_x = my.x - step;
-					else
-						new_x = my.x + step;
-				}
+				GamePanel parent = (GamePanel) me.getParent();
+				parent.willDoStep(me, richtung_UO, 30);
+//
+//				GamePanel parent = (GamePanel) me.getParent();
+//
+//				boolean stop = false;
+//				for (GamePiece comp : parent.getAllGamePiece()) {
+//
+//					if (me.equals(comp))
+//						continue;
+//
+//					stop = BoundsUtils.overlapByMoving(my, comp.getBounds(), richtung_LR, step)
+//							|| BoundsUtils.overlapByMoving(my, comp.getBounds(), richtung_UO, step)
+//							|| BoundsUtils.smallOutsideOfGreat(my, me.getParent().getBounds(), richtung_LR, step)
+//							|| BoundsUtils.smallOutsideOfGreat(my, me.getParent().getBounds(), richtung_UO, step);
+//
+//					if (stop) {
+//						if (!GameRules_okkit.interaction(me, comp))
+//							counter++;
+//						break;
+//					}
+//				}
+//
+//				if (richtung_UO == Constants.UNTEN) {
+//					if (stop)
+//						new_y = my.y - step;
+//					else
+//						new_y = my.y + step;
+//				} else {
+//					if (stop)
+//						new_y = my.y + step;
+//					else
+//						new_y = my.y - step;
+//				}
+//
+//				if (richtung_LR == Constants.LINKS) {
+//					if (stop)
+//						new_x = my.x + step;
+//					else
+//						new_x = my.x - step;
+//				} else {
+//					if (stop)
+//						new_x = my.x - step;
+//					else
+//						new_x = my.x + step;
+//				}
 
 				if (counter == me.dieAfter) {
 					((Timer) evt.getSource()).stop();
 					me.die();
-				} else
-					me.setBounds(new_x, new_y, my.width, my.height);
+				} 
+//				else
+//					me.setBounds(new_x, new_y, my.width, my.height);
 			}
 		});
 		timer.start();

@@ -63,25 +63,6 @@ public abstract class GamePiece extends JButton {
 		return new Dimension(icon.getIconWidth(), icon.getIconHeight());
 	}
 
-//	public boolean isMortal() {
-//
-//		return false;
-//	}
-//
-//	public void die() {
-//
-//	}
-//
-//	public boolean isDeadly() {
-//
-//		return false;
-//	}
-//
-//	public boolean isMovable() {
-//
-//		return false;
-//	}
-
 	protected void resetIcon(ImageIcon icon) {
 
 		if (icon == null)

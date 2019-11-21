@@ -73,7 +73,7 @@ public class GamePlayer extends GamePiece implements Mortable {
 	ImageIcon getPengImage(int i) {
 
 //		String img = "/CatPeng" + i + ".png";
-		String img = "/CatPeng2.png";
+		String img = "/gif_tot.gif";
 //		String img = "/CatSmall.png";
 		return new ImageIcon(getClass().getResource(img));
 	}

@@ -72,7 +72,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 		startRobots();
 	}
 
-	private void initPlayer(char[][] content, int playerPosition) {
+	protected void initPlayer(char[][] content, int playerPosition) {
 		
 		char ch;
 		
@@ -129,7 +129,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 		return content;
 	}
 
-	private void initPieces(char[][] content) {
+	protected void initPieces(char[][] content) {
 
 		char ch;
 
@@ -146,7 +146,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 		}
 	}
 
-	private void initDoors(char[][] content) {
+	protected void initDoors(char[][] content) {
 
 		int begin = 0;
 		int end = 0;
@@ -288,7 +288,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 		}
 	}
 
-	private int willDoStep(GamePiece moving, int richtung, int step) {
+	public int willDoStep(GamePiece moving, int richtung, int step) {
 
 		if (moving instanceof GamePlayer) {
 			GameDoor door = this.checkPlayerAtDoor(moving);
@@ -362,7 +362,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 	 * Aufgabe: Kommentieren Sie JEDE Zeile. D. h. erklären Sie, was in dieser jeder
 	 * Zeile passiert!
 	 */
-	private void stop(GameDoor door) {
+	protected void stop(GameDoor door) {
 		System.out.println("STOOOOOOOOOOOOOOOOOPPPPPPPPPPP in " + this.getMyFrame().getClass());
 
 		this.pause = true;
