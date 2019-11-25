@@ -5,6 +5,7 @@ import game.BlockFest;
 import game.Constants;
 import game.GamePanel;
 import game.Robot;
+import game.Schlüssel;
 import game.Spawner;
 
 public class OffeneHosePanel extends GamePanel{
@@ -31,9 +32,11 @@ public class OffeneHosePanel extends GamePanel{
 				else if (ch == Constants.CH_SPAWNER) {
 					this.add(new Spawner(j * Constants.FILE_STEP_X, i * Constants.FILE_STEP_Y));
 				}
+				else if (ch == Constants.CH_KEY) {
+					this.add(new Schlüssel(j * Constants.FILE_STEP_X, i * Constants.FILE_STEP_Y));
 				
+				}
 			}
 		}
-	}
-
+	}	
 }
