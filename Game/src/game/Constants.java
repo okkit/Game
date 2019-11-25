@@ -14,6 +14,7 @@ public class Constants {
 	public static char CH_BLANK = ' ';
 	public static char CH_BLOCKFEST = 'F';
 	public static char CH_SPAWNER = 'S';
+	public static char CH_KEY = 'S';
 	
 	// Schritt beim einlesen aus dem File
 	public static int FILE_STEP_X = 10;
@@ -30,6 +31,7 @@ public class Constants {
 	public static final String BLOCK_IMAGE = "/Block_10x10.png";
 	public static final String BLOCKFEST_IMAGE = "/Festbock.png";
 	public static final String SPAWNER_IMAGE = "/Spawner_30x30.png";
+	public static final String KEY_IMAGE = "/Ritter.gif";
 	
 	
 	// GameFrame-Positionierung und Größe auf dem Bildschirm
