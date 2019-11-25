@@ -2,9 +2,7 @@ package angryPirate;
 
 import java.awt.event.KeyEvent;
 
-import javax.swing.Timer;
-
-import game.Block;
+import game.Bullet;
 import game.Constants;
 import game.GamePanel;
 import game.GamePiece;
@@ -23,23 +21,27 @@ public class AngryPiratePanel extends GamePanel {
 	}
 	
 	@Override
+	public void keyTyped(KeyEvent e) {
+		// Steuerung aus GamePanel.java soll nicht mehr funktionieren
+	}
+	
+	@Override
 	public void keyPressed(KeyEvent e) {
-
-		if (this.pause)
-			return;
 
 		int keyCode = e.getKeyCode();
 		GamePlayer player = null;
 		player = GamePlayer.getPlayer();
-		int richtung;
+		int richtung = Constants.RECHTS;
 		
 		switch(keyCode) {
-		// Steuerung mit Maustasten
+		// Steuerung mit Pfeiltasten
 		case KeyEvent.VK_UP:
 			willDoStep(player, Constants.OBEN, Constants.STEP_DEFAULT);
+			richtung = Constants.OBEN;
 			break;
 		case KeyEvent.VK_LEFT:
 			willDoStep(player, Constants.LINKS, Constants.STEP_DEFAULT);
+			richtung = Constants.LINKS;
 			break;
 		case KeyEvent.VK_DOWN:
 			willDoStep(player, Constants.UNTEN, Constants.STEP_DEFAULT);
@@ -50,9 +52,11 @@ public class AngryPiratePanel extends GamePanel {
 		// Steuerung mit w, a, s, d
 		case KeyEvent.VK_W:
 			willDoStep(player, Constants.OBEN, Constants.STEP_DEFAULT);
+			richtung = Constants.OBEN;
 			break;
 		case KeyEvent.VK_A:
 			willDoStep(player, Constants.LINKS, Constants.STEP_DEFAULT);
+			richtung = Constants.LINKS;
 			break;
 		case KeyEvent.VK_S:
 			willDoStep(player, Constants.UNTEN, Constants.STEP_DEFAULT);
@@ -63,13 +67,14 @@ public class AngryPiratePanel extends GamePanel {
 		}
 		
 		if(keyCode == KeyEvent.VK_SPACE) {
-			this.shoot(player, Constants.UNTEN, Constants.STEP_DEFAULT);
+			this.shoot(player, richtung, Constants.STEP_DEFAULT);
 		}
 	}
 	
 	public void shoot(GamePiece player, int richtung, int step) {
-		Block canon = new Block(player.getX(), player.getY());
+		Bullet canon = new Bullet(player.getX(), player.getY(), richtung, step);
 		add(canon);
+		canon.goKill(canon.getX(), canon.getY(), richtung, step);
 		
 	}
 
