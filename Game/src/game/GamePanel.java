@@ -250,7 +250,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 		}
 	}
 
-	private void startRobots() {
+	protected void startRobots() {
 
 		Component[] piecies = this.getComponents();
 
