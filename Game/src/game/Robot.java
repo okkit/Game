@@ -99,6 +99,7 @@ public class Robot extends GamePiece implements Mortable {
 				
 				GamePanel parent = (GamePanel) me.getParent();
 				parent.willDoStep(me, richtung_UO, 30);
+				parent.willDoStep(me, richtung_LR, 30);
 //
 //				GamePanel parent = (GamePanel) me.getParent();
 //

@@ -9,6 +9,8 @@ public class Constants {
 	public static char CH_DOOR = 	'D';
 	public static char CH_ROBOT = 	'R';
 	public static char CH_BLOCK = 	'B';
+	public static char CH_UNMOVEABLEBLOCK = 	'U';
+	public static char CH_COIN = 	'M';
 	public static char CH_PLAYER = 	'P';
 	public static char CH_NOTHING = '-';
 	public static char CH_BLANK = ' ';
@@ -27,6 +29,7 @@ public class Constants {
 	public static final String ROBOT_IMAGE3 = "/666.gif";
 	public static final String BLOCK_IMAGE = "/Block_10x10.png";
 	public static final String UNMOVEABLEBLOCK_IMAGE = "/Block_10x10.png";
+	public static final String COIN_IMAGE = "/coin.png";
 	
 	// GameFrame-Positionierung und Größe auf dem Bildschirm
 	public static final int FRAME_X = 900;
