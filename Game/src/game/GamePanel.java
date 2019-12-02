@@ -320,6 +320,11 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 						
 							moveStep = step;
 							moveStep = this.willDoStep(next, richtung, moveStep);
+							
+						} else if(moving instanceof GamePlayer && next instanceof Schlüssel){
+							this.remove(next);
+							
+							((GamePlayer)moving).nimmSchlüssel((Schlüssel)next);
 						}
 					}
 				}

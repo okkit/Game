@@ -10,9 +10,8 @@ import javax.swing.Timer;
 
 public class GamePlayer extends GamePiece implements Mortable {
 
-	/**
-	 * 
-	 */
+	private int keyCounter = 0;
+	
 	private static final long serialVersionUID = 1L;
 	private static GamePlayer instance;
 
@@ -77,4 +76,10 @@ public class GamePlayer extends GamePiece implements Mortable {
 //		String img = "/CatSmall.png";
 		return new ImageIcon(getClass().getResource(img));
 	}
+		public void nimmSchlüssel(Schlüssel k) {
+			
+			keyCounter++;
+			System.out.println(keyCounter);
+			
+		}
 }
