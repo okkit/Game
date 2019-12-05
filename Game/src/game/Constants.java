@@ -16,8 +16,8 @@ public class Constants {
 	public static char CH_BLANK = ' ';
 	
 	// Schritt beim einlesen aus dem File
-	public static int FILE_STEP_X = 10;
-	public static int FILE_STEP_Y = 10;
+	public static int FILE_STEP_X = 16;
+	public static int FILE_STEP_Y = 16;
 	// Schritt beim einlesen aus dem File
 	public static int DOOR_THICKNESS = 10;
 	
@@ -27,15 +27,15 @@ public class Constants {
 	public static final String ROBOT_IMAGE1 = "/robot.gif";
 	public static final String ROBOT_IMAGE2 = "/666.gif";
 	public static final String ROBOT_IMAGE3 = "/666.gif";
-	public static final String BLOCK_IMAGE = "/Block_10x10.png";
+	public static final String BLOCK_IMAGE = "/iconfinder_Smooth_131894.png";
 	public static final String UNMOVEABLEBLOCK_IMAGE = "/Block_10x10.png";
 	public static final String COIN_IMAGE = "/coin.png";
 	
 	// GameFrame-Positionierung und Größe auf dem Bildschirm
 	public static final int FRAME_X = 900;
 	public static final int FRAME_Y = 200;
-	public static final int FRAME_WIDTH = 1000;
-	public static final int FRAME_HEIGHT = 800;
+	public static final int FRAME_WIDTH = 1600;
+	public static final int FRAME_HEIGHT = 1000;
 	
 	public static final int DOOR_HEIGHT = 20;
 	
@@ -47,15 +47,15 @@ public class Constants {
 	// Positionierung und Größe des GamePanels im Frame
 	public static final int PANEL_X = 5;
 	public static final int PANEL_Y = 5;
-	public static final int PANEL_WIDTH = 975;
-	public static final int PANEL_HEIGHT = 750;
+	public static final int PANEL_WIDTH = 1550;
+	public static final int PANEL_HEIGHT = 980;
 	// Farbe des Panels
 	public static final int PANEL_C_RED = 255;
 	public static final int PANEL_C_GREEN = 255;
 	public static final int PANEL_C_BLUE = 255;
 
 	// Schritt, mit dem sich der Player bewegt
-	public static final int STEP_DEFAULT = 10;
+	public static final int STEP_DEFAULT = 16;
 
 	// Richtungskonstanten
 	public static final int OBEN = 15;
@@ -64,8 +64,8 @@ public class Constants {
 	public static final int RECHTS = 73;
 
 	// Player-Button-Dimensionierungen
-	public static final int PLAYER_WIDTH = 50;
-	public static final int PLAYER_HEIGHT = 100;
+	public static final int PLAYER_WIDTH = 32;
+	public static final int PLAYER_HEIGHT = 64;
 
 	// Block-Canva-Dimensionierungen
 	public static final int BLOCK_WIDTH = 60;

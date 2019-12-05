@@ -16,7 +16,7 @@ public class FileUtils {
 		String cwd = System.getProperty("user.dir");
 //        System.out.println("Current working directory : " + cwd);
         
-		char[][] content = new char[80][100];
+		char[][] content = new char[100][160];
 
 		FileInputStream fstream = new FileInputStream(cwd+"/src/resources/rooms/" + filename);
 		BufferedReader br = null;

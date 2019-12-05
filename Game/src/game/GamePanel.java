@@ -384,7 +384,7 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 
 		GamePanel me = this;
 		int alpha = 0;
-		int alphastep = 10;
+		int alphastep = 16;
 		int timestep = 100;
 
 		JPanel fog = new JPanel() {
