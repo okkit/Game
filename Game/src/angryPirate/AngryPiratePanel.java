@@ -10,6 +10,8 @@ import game.GamePlayer;
 
 public class AngryPiratePanel extends GamePanel {
 
+	int richtung = Constants.RECHTS;
+	
 	public AngryPiratePanel(String dataSource) {
 		super(dataSource);
 		// TODO Auto-generated constructor stub
@@ -31,7 +33,6 @@ public class AngryPiratePanel extends GamePanel {
 		int keyCode = e.getKeyCode();
 		GamePlayer player = null;
 		player = GamePlayer.getPlayer();
-		int richtung = Constants.RECHTS;
 		
 		switch(keyCode) {
 		// Steuerung mit Pfeiltasten
@@ -45,9 +46,11 @@ public class AngryPiratePanel extends GamePanel {
 			break;
 		case KeyEvent.VK_DOWN:
 			willDoStep(player, Constants.UNTEN, Constants.STEP_DEFAULT);
+			richtung = Constants.UNTEN;
 			break;
 		case KeyEvent.VK_RIGHT:
 			willDoStep(player, Constants.RECHTS, Constants.STEP_DEFAULT);
+			richtung = Constants.RECHTS;
 			break;
 		// Steuerung mit w, a, s, d
 		case KeyEvent.VK_W:
@@ -60,22 +63,25 @@ public class AngryPiratePanel extends GamePanel {
 			break;
 		case KeyEvent.VK_S:
 			willDoStep(player, Constants.UNTEN, Constants.STEP_DEFAULT);
+			richtung = Constants.UNTEN;
 			break;
 		case KeyEvent.VK_D:
 			willDoStep(player, Constants.RECHTS, Constants.STEP_DEFAULT);
+			richtung = Constants.RECHTS;
 			break;		
 		}
 		
 		if(keyCode == KeyEvent.VK_SPACE) {
 			this.shoot(player, richtung, Constants.STEP_DEFAULT);
 		}
+		
 	}
 	
 	public void shoot(GamePiece player, int richtung, int step) {
 		Bullet canon = new Bullet(player.getX(), player.getY(), richtung, step);
 		add(canon);
-		canon.goKill(canon.getX(), canon.getY(), richtung, step);
-		
+		canon.goKill(canon , richtung, step);
+//		canon.die();
 	}
 
 }
