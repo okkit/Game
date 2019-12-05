@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import game.Actions;
 import game.Block;
+import game.Coin;
 import game.GamePlayer;
 import game.Robot;
 import game.rules.GameRules;
@@ -78,4 +79,31 @@ public class GameRules_okkit extends GameRules {
 		return false;
 	}
 
+	public static boolean pickupable(Object moving, Object standing) {
+		if (moving instanceof Robot) {
+			if (standing instanceof GamePlayer) {
+				return false;
+			}
+			else if (standing instanceof Coin) {
+				return false;
+			}
+		}
+		else if (moving instanceof GamePlayer) {
+			if (standing instanceof Coin) {
+				return true;
+			}
+			if (standing instanceof Coin) {
+				return false;
+			}
+		}
+		else if (moving instanceof Coin) {
+			if (standing instanceof Robot) {
+				return false;
+			}
+			if (standing instanceof Coin) {
+				return false;
+			}
+		}
+		return false;
+	}
 }

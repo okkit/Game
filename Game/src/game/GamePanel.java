@@ -327,6 +327,11 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 							moveStep = step;
 							moveStep = this.willDoStep(next, richtung, moveStep);
 						}
+						else if (moving instanceof GamePlayer && next instanceof Coin) {
+							
+							next.setBounds(10, 10, 10, 10);
+							this.remove(next);
+						}
 					}
 				}
 			}
@@ -361,6 +366,10 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 	
 	protected boolean movable(Object moving, Object standing) {
 		return GameRules_okkit.movable(moving, standing);
+	}
+	
+	protected boolean pickupable(Object moving, Object standing) {
+		return GameRules_okkit.pickupable(moving, standing);
 	}
 
 

@@ -11,4 +11,9 @@ public class GameRules {
 
 		return false;
 	}
+	
+	public static boolean pickupable(Object moving, Object standing) {
+
+		return false;
+	}
 }

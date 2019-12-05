@@ -23,7 +23,7 @@ public class Constants {
 	
 	
 	// Images
-	public static final String PLAYER_IMAGE = "/cat.gif";
+	public static final String PLAYER_IMAGE = "/Minion-stand.png";
 	public static final String ROBOT_IMAGE1 = "/robot.gif";
 	public static final String ROBOT_IMAGE2 = "/666.gif";
 	public static final String ROBOT_IMAGE3 = "/666.gif";
