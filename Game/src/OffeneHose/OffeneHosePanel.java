@@ -33,8 +33,7 @@ public class OffeneHosePanel extends GamePanel{
 					this.add(new Spawner(j * Constants.FILE_STEP_X, i * Constants.FILE_STEP_Y));
 				}
 				else if (ch == Constants.CH_KEY) {
-					this.add(new Schlüssel(j * Constants.FILE_STEP_X, i * Constants.FILE_STEP_Y));
-				
+					this.add(new Schlüssel(j * Constants.FILE_STEP_X, i * Constants.FILE_STEP_Y, true));
 				}
 			}
 		}

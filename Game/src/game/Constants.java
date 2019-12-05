@@ -32,6 +32,7 @@ public class Constants {
 	public static final String BLOCKFEST_IMAGE = "/Festbock.png";
 	public static final String SPAWNER_IMAGE = "/Spawner_30x30.png";
 	public static final String KEY_IMAGE = "/Key.png";
+	public static final String KEY2_IMAGE = "/Key2.png";
 	
 	
 	// GameFrame-Positionierung und Größe auf dem Bildschirm

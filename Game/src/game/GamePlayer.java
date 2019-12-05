@@ -10,7 +10,8 @@ import javax.swing.Timer;
 
 public class GamePlayer extends GamePiece implements Mortable {
 
-	private int keyCounter = 0;
+	public int keyCounter = 0;
+	
 	
 	private static final long serialVersionUID = 1L;
 	private static GamePlayer instance;
@@ -30,6 +31,13 @@ public class GamePlayer extends GamePiece implements Mortable {
 		return GamePlayer.instance;
 	}
 	
+	public int getKeyCounter() {
+		return keyCounter;
+	}
+
+	public void setKeyCounter(int keyCounter) {
+		this.keyCounter = keyCounter;
+	}
 
 	public static GamePlayer getPlayer() {
 		if (GamePlayer.instance == null) {
@@ -81,5 +89,12 @@ public class GamePlayer extends GamePiece implements Mortable {
 			keyCounter++;
 			System.out.println(keyCounter);
 			
-		}
+			if(keyCounter > 0) {
+				
+			
+				
+			}
+			}
+			
+		
 }

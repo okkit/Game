@@ -12,9 +12,11 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
+import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
@@ -269,6 +271,14 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
+		
+		if(GamePlayer.getPlayer().getKeyCounter() > 0) {
+			add(new Schlüssel(0, getHeight() -740, false)).repaint();
+		}
+		
+//		if(getComponent(playerPositionInComs  - 1).) {
+//			System.out.println("key");
+//		}
 
 		if (this.pause)
 			return;
@@ -458,7 +468,14 @@ public class GamePanel extends JPanel implements KeyListener, MouseListener {
 
 		return (GameFrame) SwingUtilities.getAncestorOfClass(GameFrame.class, this);
 	}
-
+	
+	public void schlüsselanzeigen() {
+		
+		
+		add(new Schlüssel(0 , getHeight()-100, false));
+		
+	}
+	
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
